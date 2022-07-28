@@ -18,9 +18,8 @@
         type: 1
       },
       success: function(result) {
-        console.log(result);
-        // $('#coverprint').html(result);
-        // return $('#loading').hide();
+        $('#coverprint').html(result);
+        return $('#loading').hide();
       }
     });
   };
