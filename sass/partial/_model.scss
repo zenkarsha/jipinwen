@@ -1,0 +1,8 @@
+.modal-content {
+  background: black;
+  @include border-radius(0px);
+  border: 1px solid #ccc;
+  h2 {
+    margin-top: 0;
+  }
+}

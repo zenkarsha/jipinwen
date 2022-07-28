@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+}
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: "PMingLiU";
+}
+a {
+  @include link-colors($link-color, $link-color-hover);
+  @include hover-link;
+  &:active {
+    color: $link-color;
+  }
+}
+hr {
+  border: none;
+  border-top: 1px solid #999;
+}

@@ -1,0 +1,32 @@
+// gray
+$white            : #FFFFFE;
+$black            : #000000;
+
+// custom colors
+$kangxi-red       : #A30612;
+$ppt-yellow       : #FFFF5C;
+$ppt-blue         : #01007F;
+
+// main color
+$main-color       : $ppt-blue;
+$main-color-light : lighten($main-color, 10%);
+$main-color-dark  : darken($main-color, 10%);
+
+// text
+$text-black       : #666;
+$text-black-light : #999;
+$text-gray        : #AFAFAF;
+$text-gray-light  : lighten($text-gray, 10%);
+
+// link
+$link-color       : $ppt-yellow;
+$link-color-hover : $ppt-yellow;
+
+// background
+$background-color : $black;
+
+// text color
+$text-color       : $text-gray;
+
+// navbar
+$navbar-text-color: $text-gray;

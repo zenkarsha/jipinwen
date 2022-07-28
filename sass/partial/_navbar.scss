@@ -1,0 +1,80 @@
+.navbar {
+  border-width: 0;
+  background-color: $main-color;
+  border-bottom: none;
+  top: 0;
+  position: fixed;
+  width: inherit;
+  i {
+    font-style: normal;
+  }
+  a {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  li > a,
+  .navbar-toggle {
+    color: $navbar-text-color;
+  }
+  li > a.btn {
+    color: $navbar-text-color;
+  }
+  .dropdown-menu li a,
+  .dropdown-menu li a:hover {
+    color: $navbar-text-color;
+  }
+  .dropdown-menu li > a {
+    padding-left: 30px;
+  }
+  .dropdown-menu .divider {
+    background-color: rgba(255,255,255,0.1);
+  }
+  li > a:hover,
+  li > a:focus,
+  .open, .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    background-color: $main-color-dark;
+    color: #fff;
+  }
+  .logo {
+    color: $text-color;
+    font-size: $base-font-size;
+    color: $navbar-text-color;
+    font-family: "PMingLiU";
+  }
+  .navbar-toggle, .close {
+    outline: 0;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .nav .caret,
+  .nav a:hover .caret {
+    border-top-color: $navbar-text-color;
+    border-bottom-color: $navbar-text-color;
+  }
+  .nav .open > a .caret,
+  .nav .open > a:hover .caret,
+  .nav .open > a:focus .caret {
+    border-top-color: $navbar-text-color;
+    border-bottom-color: $navbar-text-color;
+  }
+
+  @include at-breakpoint($pad) {
+    .dropdown-menu li a {
+      color: $main-color;
+    }
+    .dropdown-menu .divider {
+      background-color: #eee;
+    }
+    .navbar-form {
+      width: 40%;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    .navbar-form {
+      width: 30%;
+    }
+  }
+}

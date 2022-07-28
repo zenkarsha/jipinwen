@@ -1,0 +1,46 @@
+.ajax-loading {
+  display: none;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+.load-more {
+  text-align: center;
+  padding-top: 20px;
+}
+#showroom-list {
+  padding-top: 20px;
+  background: none;
+  .thumbnail {
+    padding: 0;
+    @include border-radius(0px);
+    border: none;
+    background: none;
+    div {
+      border: 1px solid $text-gray;
+      width: 100%;
+      padding-bottom: 52.5%;
+      background-repeat: no-repeat;
+      margin-bottom: 5px;
+    }
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+#showroom-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  .row,
+  .col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .share-link {
+    margin-bottom: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

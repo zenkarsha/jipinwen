@@ -1,0 +1,26 @@
+---
+$path
+$total
+$list
+$sort
+---
+
+<div class="row">
+  <div class="col-sm-12">
+    <p>目前有 {{$total}} 篇祭品文
+      <span class="mobile-hide"> | </span>
+      <br class="desktop-hide">
+      <a href="{{$path}}showroom?sort=hot">熱門排序</a> |
+      <a href="{{$path}}showroom">時間排序</a>
+    </p>
+    <div class="row" id="showroom-list">
+    {{$list}}
+    </div>
+    <div class="load-more">
+      <a class="btn btn-link">載入更多祭品文</a>
+    </div>
+    <div class="ajax-loading">載入中</div>
+    <input type="hidden" id="loadingpage" value="0">
+    <input type="hidden" id="sort" value="{{$sort}}">
+  </div>
+</div>

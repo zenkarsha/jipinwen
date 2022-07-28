@@ -1,0 +1,13 @@
+.mobile-hide {
+  display: none;
+  @include at-breakpoint($pad) {
+    display: initial;
+    font-style: normal;
+  }
+}
+.desktop-hide {
+  display: initial;
+  @include at-breakpoint($desktop) {
+    display: none;
+  }
+}

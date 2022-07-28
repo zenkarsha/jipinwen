@@ -1,0 +1,39 @@
+#app {
+  h1 {
+    display: none;
+  }
+  h2 {
+    display: none;
+  }
+  textarea,
+  input[type=text] {
+    background: #333;
+    @include border-radius(0px);
+    border: 1px solid $text-gray;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 5px;
+    color: $white;
+  }
+  textarea {
+    height: 120px;
+    margin-bottom: 10px;
+    &.comment {
+      height: 60px;
+    }
+  }
+  #example {
+    margin-bottom: 10px;
+    @include box-sizing(border-box);
+  }
+
+  @include at-breakpoint($pad) {
+
+  }
+  @include at-breakpoint($pad-plus) {
+
+  }
+  @include at-breakpoint($desktop) {
+
+  }
+}

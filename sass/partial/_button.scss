@@ -1,0 +1,41 @@
+.btn {
+  @include border-radius(3px);
+  // text-overflow: ellipsis;
+  overflow: hidden;
+  outline: none;
+  &:hover,&:focus,&:active {
+    outline: none;
+  }
+}
+.btn-default {
+  color: #fff;
+  background-color: $main-color;
+  border-color: $main-color-dark;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: $main-color-light;
+    border-color: $main-color;
+  }
+}
+.btn-link {
+  @include adjust-font-size-to($base-font-size);
+  @include link-colors($link-color, $link-color-hover);
+  @include hover-link;
+  text-align: center;
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  margin-bottom: 20px;
+  &:hover, &:focus, &:active {
+    outline: none;
+    border: none;
+    @include link-colors($link-color, $link-color-hover);
+  }
+}

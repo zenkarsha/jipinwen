@@ -1,0 +1,5 @@
+.well {
+  padding: 0;
+  @include border-radius(0px);
+  border: 1px solid $text-gray;
+}

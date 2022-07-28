@@ -1,0 +1,93 @@
+---
+$path
+$title
+$description
+$default-text
+---
+
+<form role="form" action="generate" id="appform" class="form-horizontal" method="post">
+  <div class="row" id="app">
+    <div class="col-sm-6 col-md-7 col-lg-8">
+      <div class="preview">
+        <div id="coverprint"><div></div></div>
+        <div id="loading"><div><img src="{{$path}}images/loading.gif"></div></div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-4">
+      <h1>{{$title}}</h1>
+      <h2>{{$description}}</h2>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 col-md-3 control-label">署名</label>
+            <div class="col-xs-8 col-sm-8 col-md-9">
+              <input type="text" name="author" id="author" class="form-control text-input" placeholder="你的名字" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 col-md-3 control-label">標題</label>
+            <div class="col-xs-8 col-sm-8 col-md-9">
+              <input type="text" name="title" id="title" class="form-control text-input" placeholder="祭品文標題" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-xs-4 col-sm-4 col-md-3 control-label">
+              祭品文<br>內容<br>
+            </label>
+            <div class="col-xs-8 col-sm-8 col-md-9">
+              <select class="form-control" id="example">
+                <option value="">— 祭品文範本 —</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x541e;&#x4e86;&#x6211;&#x5bb6;&#x99ac;&#x6876;@">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x541e;&#x4e86;&#x6211;&#x5bb6;&#x99ac;&#x6876;@</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x5403;&#x57ae;&#x7fa9;&#x7f8e;@">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x5403;&#x57ae;&#x7fa9;&#x7f8e;@</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x544a;&#x767d;">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x544a;&#x767d;</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x966a;&#x738b;&#x4e16;&#x5805;&#x8df3;&#x6d77;">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x966a;&#x738b;&#x4e16;&#x5805;&#x8df3;&#x6d77;</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x53ef;&#x4ee5;all pass">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x53ef;&#x4ee5;all pass</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x6539;&#x59d3;&#x796d;">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x6539;&#x59d3;&#x796d;</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x767c;30&#x4efd;&#x96de;&#x6392;@">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x767c;30&#x4efd;&#x96de;&#x6392;@</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x767c;30&#x676f;&#x73cd;&#x5976;@">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x767c;30&#x676f;&#x73cd;&#x5976;@</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x5e36;&#x5973;&#x53cb;&#x53bb;&#x898b;&#x7236;&#x6bcd;">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x8981;&#x5e36;&#x5973;&#x53cb;&#x53bb;&#x898b;&#x7236;&#x6bcd;</option>
+                <option value="&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x51fa;&#x6ac3;&#x3002;">&#x53ea;&#x8981;&#x5272;&#x95cc;&#x5c3e;&#x6295;&#x7968;&#x7387;&#x904e;&#x534a;&#xff0c;&#x6211;&#x5c31;&#x51fa;&#x6ac3;&#x3002;</option>
+              </select>
+              <textarea name="text" id="text" class="form-control" placeholder="例如：只要割闌尾投票率過半，我就吃垮義美@">{{$default-text}}</textarea>
+              <a href="#" data-toggle="modal" data-target="#howModal">如何使用「祭品圖」?</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <button type="button" class="submit btn btn-link" id="default-submit" style="border: 1px solid yellow;padding:2px;">下載圖片</button>
+            </div>
+          </div>
+          <input type="hidden" value="" name="type" id="type">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="modal fade" id="howModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h2>如何使用祭品圖？</h2>
+        <p>
+          請嘗試在下方列表「關鍵字」的前面、或後面<br>
+          加上「@」符號，就會自動出現對應的「祭品圖」<br><br>
+          <ul>
+            <li>食物類：雞排、珍奶、披薩、甜甜圈、牛排、冰棒</li>
+            <li>物品類：隨身碟、籃球架、樹、消波塊</li>
+            <li>品牌類：義美、麥當勞、肯德基、摩斯漢堡、星巴客</li>
+            <li>行為類：切、告白、裸奔、跳海</li>
+          </ul><br>
+          範例說明：<br>
+          您可以輸入「@甜甜圈」，就會自動出現甜甜圈的祭品圖<br>
+          您也可以將「@」加在關鍵字後方<br>
+          例如「裸奔@」，則圖示就會出現在文字後方<br><br>
+          還有一種：<br>
+          試試輸入 {飲料}、{冰}、{樹}、{消波塊}
+        </p>
+        <br>
+        <button type="button" class="btn btn-default btn-block" data-dismiss="modal">謝謝你，我了解了</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+#commentform {
+  padding: 0 15px;
+}
+.comment-list {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  li span {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 26px;
+    height: 26px;
+    margin-bottom: 8px;
+    vertical-align: top;
+    &.type {
+      color: red;
+    }
+    &.author {
+      color: #FFFF00;
+      font-weight: bold;
+      max-width: 80%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space:nowrap;
+    }
+    &.message {
+      display: block;
+      color: #808000;
+      max-width: 95%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space:nowrap;
+    }
+    &.time {
+      float: right;
+      a {
+        color: #C0C0C0;
+      }
+    }
+    @include at-breakpoint($pad) {
+      &.author {
+        max-width: 20%;
+      }
+      &.message {
+        display: inline-block;
+        max-width: 55%;
+      }
+    }
+  }
+}

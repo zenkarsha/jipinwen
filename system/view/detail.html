@@ -1,0 +1,60 @@
+---
+$path
+$url
+$image
+$comment-list
+$parent
+---
+
+<div class="row" id="showroom-detail">
+  <div class="col-sm-12">
+    <h3 class="parent">{{$parent}}</h3>
+    <div class="well">
+      <img src="{{$image}}" class="img-responsive">
+    </div>
+    <div class="row">
+      <div class="col-md-12 share-link text-center">
+        直接分享本頁<span class="mobile-hide">： </span><br class="desktop-hide"><a href="{{$path}}{{$url}}">{{$path}}{{$url}}</a>
+      </div>
+      <div class="col-md-4 share-link text-center">
+        <div class="fb-like" data-href="{{$path}}{{$url}}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+      </div>
+      <div class="col-md-4 share-link text-center">
+        <a href="{{$path}}showroom?sort=hot"><span class="mobile-hide">[z]</span>更多祭品文</a>
+      </div>
+      <div class="col-md-4 share-link text-center">
+        <a href="{{$path}}"><span class="mobile-hide">[p]</span>發表祭品文</a>
+      </div>
+    </div>
+    <hr>
+    <ul class="comment-list">{{$comment-list}}</ul>
+    <form role="form" action="generate" id="commentform" class="form-horizontal" method="post">
+      <div class="row" id="app">
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">署名</label>
+            <div class="col-sm-5">
+              <input type="text" name="author" id="author" class="form-control text-input" placeholder="你的名字" value="" required>
+            </div>
+            <label class="col-sm-2 control-label">類型</label>
+            <div class="col-sm-3">
+              <select class="form-control" name="comment_type" id="comment_type">
+                <option value="0">只加→註解</option>
+                <option value="1">值得推薦</option>
+                <option value="2">給它噓聲</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">回應</label>
+            <div class="col-sm-10">
+              <input type="text" name="text" id="text" class="form-control comment" placeholder="回應內容" required>
+              <button type="submit" class="submit btn btn-link" id="comment-submit" style="text-align:left;padding: 0;">送出回應<!-- （並新增到祭品文精華區） --></button>
+            </div>
+          </div>
+          <input type="hidden" name="parent" id="parent" value="{{$url}}">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
